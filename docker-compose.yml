@@ -1,0 +1,14 @@
+#FABIANO HORN
+
+version: '3.9'
+
+services:
+  apache-service:
+    container_name: public-website-my-apache-app
+    image: httpd:latest
+    cpus: 1.5
+    mem_limit: 2048m
+    ports:
+    - "80:80"
+    volumes:
+    - ./website:/usr/local/apache2/htdocs
